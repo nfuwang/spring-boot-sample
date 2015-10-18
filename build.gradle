@@ -1,0 +1,24 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'hello.SampleController'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:1.2.7.RELEASE")
+}
+
+jar {
+    baseName = 'spring-boot-sample'
+    version = '0.1.0'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
